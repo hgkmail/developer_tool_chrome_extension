@@ -1,6 +1,6 @@
 # AK Tools — Chrome 扩展开发指引
 
-这是一个基于 **Vue 3 + Vite + TypeScript + Element Plus** 的 Chrome 扩展前端工程，核心功能方向为**开发类小工具**。
+这是一个基于 **Vue 3 + Vite + TypeScript + Element Plus** 的 Chrome 扩展前端工程，核心功能方向为**开发类小工具集**。
 
 ## 技术栈
 

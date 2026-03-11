@@ -20,7 +20,9 @@ export default defineConfig({
     UnoCSS(),
     // 配置 AutoImport 插件（自动导入 Element Plus API）
     AutoImport({
+      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
       resolvers: [ElementPlusResolver()],
+      dts: 'auto-imports.d.ts',
     }),
     // 自动按需引入 Element Plus 组件
     Components({

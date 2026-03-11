@@ -1,11 +1,29 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useSettingsStore } from '@/stores/settings'
+import { useI18n } from 'vue-i18n'
+
+const settings = useSettingsStore()
+const { locale } = useI18n()
+
+// Sync language on mount (user may have persisted language)
+locale.value = settings.language
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <router-view />
 </template>
 
-<style scoped></style>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  font-family: var(--el-font-family);
+}
+</style>

@@ -12,13 +12,23 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AppBreadcrumb: typeof import('./src/components/AppBreadcrumb.vue')['default']
+    AppHeader: typeof import('./src/components/AppHeader.vue')['default']
+    AppSidebar: typeof import('./src/components/AppSidebar.vue')['default']
+    FloatingButtons: typeof import('./src/components/FloatingButtons.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SettingsDrawer: typeof import('./src/components/SettingsDrawer.vue')['default']
   }
 }
 
 // For TSX support
 declare global {
+  const AppBreadcrumb: typeof import('./src/components/AppBreadcrumb.vue')['default']
+  const AppHeader: typeof import('./src/components/AppHeader.vue')['default']
+  const AppSidebar: typeof import('./src/components/AppSidebar.vue')['default']
+  const FloatingButtons: typeof import('./src/components/FloatingButtons.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
+  const SettingsDrawer: typeof import('./src/components/SettingsDrawer.vue')['default']
 }
