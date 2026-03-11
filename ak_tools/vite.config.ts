@@ -41,4 +41,16 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          '@vueuse/core': ['@vueuse/core'],
+          '@element-plus/icons-vue': ['@element-plus/icons-vue'],
+          'vue-i18n': ['vue-i18n'],
+          'fuse.js': ['fuse.js'],
+        },
+      },
+    },
+  },
 })

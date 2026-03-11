@@ -121,10 +121,12 @@ const filteredMenu = computed<MenuItem[]>(() => {
   return filtered
 })
 
+const menuRef = useTemplateRef<InstanceType<typeof ElMenu>>('menu-ref')
 const autoOpen = useDebounceFn((q) => {
   if (q) {
     for (const item of filteredMenu.value) {
       if (item.type === 'group') {
+        // @ts-ignore
         menuRef.value?.open(item.key)
       }
     }
@@ -132,7 +134,6 @@ const autoOpen = useDebounceFn((q) => {
 }, 300)
 
 // 搜索时默认展开所有非叶子节点，方便展示匹配结果
-const menuRef = useTemplateRef('menu-ref')
 watch(searchQuery, (newVal) => {
   autoOpen(newVal.trim())
 })
