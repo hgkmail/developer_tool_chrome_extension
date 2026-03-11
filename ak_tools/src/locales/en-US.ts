@@ -26,7 +26,7 @@ export default {
     formatSql: 'SQL Formatter',
   },
   home: {
-    totalTools: 'Total Tools',
+    totalTools: ' Online Tools',
     searchPlaceholder: 'Search tools...',
     recentlyUsed: 'Recently Used',
     noRecentTools: 'No recently used tools',

@@ -26,7 +26,7 @@ export default {
     formatSql: 'SQL 格式化',
   },
   home: {
-    totalTools: '小工具总数',
+    totalTools: ' 个在线小工具',
     searchPlaceholder: '搜索小工具...',
     recentlyUsed: '最近使用',
     noRecentTools: '暂无最近使用的工具',
